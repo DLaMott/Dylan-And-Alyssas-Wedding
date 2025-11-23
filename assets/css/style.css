@@ -139,8 +139,8 @@ body {
 /* Color swatches */
 .dress-list li:nth-child(1)::before { background-color: #C8A2C8;  } /* Lilac */
 .dress-list li:nth-child(2)::before { background-color: #F7C6C7; } /* Blush */
-.dress-list li:nth-child(3)::before { background-color: #A8E6CF; } /* Mint */
-.dress-list li:nth-child(4)::before { background-color: #FFFFFF; } /* Ivory */
+.dress-list li:nth-child(3)::before { background-color: #A8E6CF; } /* Sage */
+.dress-list li:nth-child(4)::before { background-color: #9ACEEB; } /* Cornflower */
 
 
 .rsvp-form {
