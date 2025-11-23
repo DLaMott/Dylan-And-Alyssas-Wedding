@@ -1,8 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head><meta charset="UTF-8"><title>RSVP</title></head>
+<head>
+    <meta charset="UTF-8">
+    <title>RSVP</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
+</head>
 <body>
-<h1>RSVP</h1>
-<p>RSVP form will appear here.</p>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="venue.html">Venue</a>
+    <a href="rsvp.html">RSVP</a>
+    <a href="dress-code.html">Dress Code</a>
+</nav>
+
+<div class="container">
+    <h1>RSVP</h1>
+    <form id="rsvpForm">
+        <label>Name:</label><br>
+        <input type="text" name="name" required><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" name="email" required><br><br>
+
+        <label>Attending?</label><br>
+        <select name="attending">
+            <option>Yes</option>
+            <option>No</option>
+        </select><br><br>
+
+        <button type="submit">Submit RSVP</button>
+    </form>
+    <p id="rsvpStatus"></p>
+</div>
 </body>
 </html>
