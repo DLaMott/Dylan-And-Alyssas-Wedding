@@ -1,41 +1,257 @@
+/* ------ Global Styles ------ */
 
 body {
-  font-family: 'Inter', sans-serif;
-  margin:0; padding:0;
-  background:#faf8f2;
-  color:#444;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  background: #f7f4ed;
+  color: #3a3a3a;
+  overflow-x: hidden;
 }
-header {
-  text-align:center;
-  padding:80px 20px;
+
+/* Light floral or gold bokeh optional background */
+.hero {
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
 }
-h1 {
-  font-family:'Playfair Display', serif;
-  font-size:48px;
-  margin-bottom:10px;
-  color:#2f3e2f;
+/* ------ Navigation ------ */
+
+.nav {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.1rem;
+  background: transparent;
 }
-nav {
-  text-align:center;
-  padding:20px;
+
+.nav a {
+  margin: 0 18px;
+  text-decoration: none;
+  color: #4a4a4a;
+  font-weight: 600;
+  transition: 0.2s;
 }
-nav a {
-  margin:0 15px;
-  color:#2f3e2f;
-  text-decoration:none;
-  font-weight:bold;
+
+.nav a:hover {
+  color: #b89a63;
 }
-.container { max-width:700px; margin:0 auto; padding:20px; }
-button {
-  background:#c8b07e;
-  color:white;
-  padding:10px 20px;
-  border:none;
-  border-radius:6px;
-  font-size:16px;
-  cursor:pointer;
+
+/* ------ Hero Card ------ */
+
+.hero-card {
+  background: #ffffffdd;
+  padding: 50px 40px;
+  border-radius: 16px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.08),
+    0 0 80px rgba(200, 180, 140, 0.25);
+  backdrop-filter: blur(4px);
+  text-align: center;
 }
-countdown {
-  font-size:28px;
-  margin-top:20px;
+
+/* Names in elegant script */
+.names {
+  font-family: "Great Vibes", cursive;
+  font-size: 64px;
+  margin-bottom: 10px;
+  color: #2e3a2e;
 }
+
+/* Secondary serif text */
+.date {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  color: #5f5f5f;
+}
+
+/* Countdown */
+.countdown {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #444;
+}
+
+/* Button */
+.save-btn {
+  display: inline-block;
+  margin-top: 30px;
+  background: #c9b27b;
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.save-btn:hover {
+  background: #b89a63;
+}
+
+/* ------ Mobile Responsiveness ------ */
+
+@media (max-width: 600px) {
+  .names {
+    font-size: 44px;
+  }
+
+  .hero-card {
+    padding: 35px 24px;
+  }
+
+  .nav a {
+    margin: 0 10px;
+    font-size: 1rem;
+  }
+}
+
+
+.page-title {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: #2e3a2e;
+}
+
+.inline-link {
+  color: #b89a63;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.inline-link:hover {
+  text-decoration: underline;
+}
+
+.dress-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.dress-list li {
+  margin: 6px 0;
+  font-size: 18px;
+}
+
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.rsvp-form input,
+.rsvp-form select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.rsvp-status {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #2e3a2e;
+}
+
+
+/* Welcome Section */
+.welcome-section {
+  background: #f7f4ed;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.welcome-card h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  color: #2e3a2e;
+  margin-bottom: 15px;
+}
+
+.welcome-card p {
+  font-size: 18px;
+  color: #4a4a4a;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Highlights Section */
+.highlights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px 20px;
+}
+
+.highlight-card {
+  background: #ffffffdd;
+  padding: 25px 20px;
+  border-radius: 16px;
+  max-width: 200px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: 0.25s;
+}
+
+.highlight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(200, 180, 140, 0.25);
+}
+
+.highlight-card img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.highlight-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  color: #2e3a2e;
+  margin-bottom: 8px;
+}
+
+.highlight-card p {
+  font-size: 16px;
+  color: #5f5f5f;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .highlights {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .highlight-card {
+    max-width: 90%;
+  }
+}
+
+
+.highlight-btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #c9b27b, #b89a63);
+    color: #fff;
+    padding: 12px 26px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(200, 160, 100, 0.3);
+}
+
+.highlight-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(200, 160, 100, 0.4);
+}
+

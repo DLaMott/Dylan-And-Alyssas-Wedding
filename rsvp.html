@@ -1,37 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>RSVP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP – Dylan & Alyssa</title>
+
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
 </head>
 <body>
-<nav>
+
+<nav class="nav">
     <a href="index.html">Home</a>
     <a href="venue.html">Venue</a>
     <a href="rsvp.html">RSVP</a>
     <a href="dress-code.html">Dress Code</a>
 </nav>
 
-<div class="container">
-    <h1>RSVP</h1>
-    <form id="rsvpForm">
-        <label>Name:</label><br>
-        <input type="text" name="name" required><br><br>
+<section class="hero">
 
-        <label>Email:</label><br>
-        <input type="email" name="email" required><br><br>
+    <div class="hero-card">
 
-        <label>Attending?</label><br>
-        <select name="attending">
-            <option>Yes</option>
-            <option>No</option>
-        </select><br><br>
+        <h1 class="page-title">RSVP</h1>
 
-        <button type="submit">Submit RSVP</button>
-    </form>
-    <p id="rsvpStatus"></p>
-</div>
-</body>
-</html>
+        <form id="rsvpForm" class="rsvp-form">
+
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdpG9ioZxydK6mf5V0FMH3YRwiJlYXVcMDqtRl6yaA__Foyaw/viewform?embedded=true" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </form>
+
+        <p id="rsvpStatus" class="rsvp-status"></p>
+
+    </div>
+
+</section>
