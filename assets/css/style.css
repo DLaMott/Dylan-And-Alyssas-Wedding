@@ -93,7 +93,6 @@ body {
   }
 }
 
-
 .page-title {
   font-family: "Playfair Display", serif;
   font-size: 42px;
@@ -418,6 +417,24 @@ body {
 @media (max-width: 480px) {
     .gallery img {
         max-width: 90%;
+    }
+
+    .countdown {
+      gap: 6px;
+    }
+
+    .countdown-unit {
+      min-width: 40px;   
+      padding: 8px 10px;
+      font-size: 14px; 
+    }
+
+    .countdown-unit span {
+      font-size: 9px;
+    }
+
+    .hero-card {
+      padding: 25px 15px;
     }
 }
 
