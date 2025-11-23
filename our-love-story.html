@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love – Dylan & Alyssa</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Standard Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png">
+
+    <!-- iOS / iPhone -->
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+    <!-- Meta for social sharing -->
+    <meta name="description" content="Dylan & Alyssa's wedding on May 1st, 2026. Join us for love, laughter, and celebration! #LaMottToLove">
+    <meta property="og:title" content="Dylan & Alyssa's Wedding">
+    <meta property="og:description" content="Join us on May 1st, 2026 for our wedding celebration! #LaMottToLove">
+    <meta property="og:image" content="https://dlamott.github.io/Dylan-And-Alyssas-Wedding/assets/img/bg.jpg">
+    <meta property="og:url" content="https://dlamott.github.io/Dylan-And-Alyssas-Wedding/index.html">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dylan & Alyssa's Wedding">
+    <meta name="twitter:description" content="Join us on May 1st, 2026 for our wedding celebration! #LaMottToLove">
+    <meta name="twitter:image" content="https://dlamott.github.io/Dylan-And-Alyssas-Wedding/assets/img/bg.jpg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="venue.html">Venue</a>
+    <a href="rsvp.html">RSVP</a>
+    <a href="dress-code.html">Dress Code</a>
+    <a href="our-love-story.html">Our Love</a>
+</nav>
+
+<div class="gallery" id="love-gallery"></div>
+
+<script>
+    const gallery = document.getElementById('love-gallery');
+
+    // Total number of images
+    const totalImages = 23;
+
+    for (let i = 1; i <= totalImages; i++) {
+        const img = document.createElement('img');
+        img.src = `assets/img/love/love${i}.jpg`;
+        img.alt = `Our love photo ${i}`;
+        gallery.appendChild(img);
+    }
+</script>
+
+<video  controls autoplay muted loop class="love-video">
+    <source src="assets/img/love/love14.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+</body>
+</html>

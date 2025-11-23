@@ -366,6 +366,68 @@ body {
   color: #A67FC8; /* match buttons */
 }
 
+.our-love {
+    background: #f8f5fc; /* very light lavender/pastel */
+    padding: 60px 20px;
+    text-align: center;
+}
 
+.our-love h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 40px;
+    color: #2e3a2e;
+    margin-bottom: 15px;
+}
+
+.our-love p {
+    font-size: 18px;
+    color: #5f5f5f;
+    margin-bottom: 40px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    justify-items: center;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto; /* keeps natural aspect ratio */
+    max-width: 300px; /* optional, prevents super wide images on large screens */
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.25s, box-shadow 0.25s;
+    cursor: pointer;
+    object-fit: cover; /* keeps images looking nice in the grid */
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .gallery img {
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery img {
+        max-width: 90%;
+    }
+}
+
+.love-video {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 16px;
+  margin: 20px auto;
+  display: block;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
 
 
