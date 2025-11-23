@@ -1,18 +1,21 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const el = document.getElementById("countdown");
-  if (!el) return;
+// Set wedding date
+const weddingDate = new Date("May 1, 2026 15:00:00").getTime();
 
-  const target = new Date("May 1, 2025 00:00:00").getTime();
+function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
 
-  setInterval(() => {
-    const diff = target - Date.now();
-    if (diff <= 0) { el.innerText = "It's the day!"; return; }
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((distance / (1000 * 60)) % 60);
+    const seconds = Math.floor((distance / 1000) % 60);
 
-    const d = Math.floor(diff/86400000);
-    const h = Math.floor((diff%86400000)/3600000);
-    const m = Math.floor((diff%3600000)/60000);
-    const s = Math.floor((diff%60000)/1000);
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+}
 
-    el.innerText = `${d}d ${h}h ${m}m ${s}s`;
-  }, 1000);
-});
+// Update every second
+setInterval(updateCountdown, 1000);
+updateCountdown();

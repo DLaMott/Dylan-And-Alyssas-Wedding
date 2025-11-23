@@ -75,22 +75,6 @@ body {
   color: #444;
 }
 
-/* Button */
-.save-btn {
-  display: inline-block;
-  margin-top: 30px;
-  background: #c9b27b;
-  color: #fff;
-  padding: 12px 26px;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  text-decoration: none;
-  transition: 0.25s;
-}
-
-.save-btn:hover {
-  background: #b89a63;
-}
 
 /* ------ Mobile Responsiveness ------ */
 
@@ -118,7 +102,7 @@ body {
 }
 
 .inline-link {
-  color: #b89a63;
+  color: #A67FC8;
   text-decoration: none;
   font-weight: 600;
 }
@@ -131,12 +115,34 @@ body {
   list-style: none;
   padding: 0;
   margin-top: 10px;
+  display: inline-block; /* centers the whole list */
+  text-align: left; /* keep the circles/text aligned in a column */
 }
 
 .dress-list li {
-  margin: 6px 0;
+  margin: 8px 0;
   font-size: 18px;
+  display: flex;
+  align-items: center; /* vertically centers the circle with text */
+  justify-content: flex-start; /* keep text left-aligned next to circle */
 }
+
+.dress-list li::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  flex-shrink: 0; /* prevent circle from shrinking */
+}
+
+/* Color swatches */
+.dress-list li:nth-child(1)::before { background-color: #C8A2C8;  } /* Lilac */
+.dress-list li:nth-child(2)::before { background-color: #F7C6C7; } /* Blush */
+.dress-list li:nth-child(3)::before { background-color: #A8E6CF; } /* Mint */
+.dress-list li:nth-child(4)::before { background-color: #FFFFFF; } /* Ivory */
+
 
 .rsvp-form {
   display: flex;
@@ -181,6 +187,47 @@ body {
   margin: 0 auto;
   line-height: 1.6;
 }
+
+.welcome-card h3 {
+    font-style: italic;
+    font-size: 24px;
+    color: #5f5f5f;
+}
+
+/* Photo Share Section */
+.photo-share {
+    background: #f7f4ed; /* same soft background as other sections */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.photo-share-card h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    color: #2e3a2e;
+    margin-bottom: 12px;
+}
+
+.photo-share-card p {
+    font-size: 18px;
+    color: #4a4a4a;
+    margin-bottom: 25px;
+}
+
+.photo-share-card .photo-img {
+    max-width: 700px; /* bigger for readability */
+    width: 90%;       /* scales nicely on mobile */
+    height: auto;
+    margin-top: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* subtle shadow */
+    border-radius: 16px; /* optional rounded corners */
+    transition: transform 0.3s;
+}
+
+.photo-share-card .photo-img:hover {
+    transform: translateY(-5px); /* slight lift on hover */
+}
+
 
 /* Highlights Section */
 .highlights {
@@ -236,22 +283,89 @@ body {
 }
 
 
+/* Countdown container */
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+/* Each time unit */
+.countdown-unit {
+  background: #C8A2C8; /* lilac to match buttons */
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  min-width: 60px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.countdown-unit span {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 5px;
+  text-transform: uppercase;
+  color: #fffdd0; /* soft accent for labels */
+}
+
+/* Save the Date Button */
+.save-btn {
+  display: inline-block;
+  margin-top: 30px;
+  background: #A67FC8; /* richer lilac for visibility */
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.25s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.save-btn:hover {
+  background: #966CC0; /* slightly darker on hover */
+  transform: translateY(-1px);
+}
+
+/* Highlight Buttons */
 .highlight-btn {
-    display: inline-block;
-    margin-top: 20px;
-    background: linear-gradient(135deg, #c9b27b, #b89a63);
-    color: #fff;
-    padding: 12px 26px;
-    border-radius: 12px;
-    font-size: 1rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: 0.3s;
-    box-shadow: 0 4px 15px rgba(200, 160, 100, 0.3);
+  display: inline-block;
+  margin-top: 20px;
+  background: #A67FC8; /* richer lilac */
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .highlight-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(200, 160, 100, 0.4);
+  background: #966CC0; /* slightly darker on hover */
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.12);
 }
+
+/* Nav Hover */
+.nav a {
+  color: #4a4a4a; /* default */
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.nav a:hover {
+  color: #A67FC8; /* match buttons */
+}
+
+
+
 
